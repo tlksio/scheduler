@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/tlksio/scheduler/issues"
   },
-  "homepage": "https://github.com/tlksio/scheduler"
+  "homepage": "https://github.com/tlksio/scheduler",
+  "devDependencies": {
+    "node-crontab": "0.0.8"
+  }
 }
