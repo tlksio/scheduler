@@ -1,0 +1,23 @@
+{
+  "name": "scheduler",
+  "version": "0.0.1",
+  "description": "tlks.io scheduler for basic jobs",
+  "main": "index.js",
+  "scripts": {
+    "test": "make cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tlksio/scheduler.git"
+  },
+  "keywords": [
+    "tlksio",
+    "scheduler"
+  ],
+  "author": "Raül Pérez <repejota@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlksio/scheduler/issues"
+  },
+  "homepage": "https://github.com/tlksio/scheduler"
+}
