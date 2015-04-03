@@ -5,6 +5,7 @@ var twitter = require('./lib/jobs/twitter');
 
 // Add jobs
 schedule.start("random-twitter-status", twitter.randTalkStatus, 1000);
+schedule.start("random-twitter-status-2", twitter.randTalkStatus, 1000);
 
 // Reset scheduler
 /*
