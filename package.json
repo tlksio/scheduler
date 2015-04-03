@@ -22,5 +22,8 @@
   "homepage": "https://github.com/tlksio/scheduler",
   "devDependencies": {
     "node-crontab": "0.0.8"
+  },
+  "dependencies": {
+    "debug": "^2.1.3"
   }
 }

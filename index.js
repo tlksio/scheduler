@@ -1,24 +1,21 @@
-var crontab = require('node-crontab');
-
 var config = require('./config.json');
 
+var schedule = require('./lib/schedule');
 var twitter = require('./lib/jobs/twitter');
-// var googleplus = require('./lib/jobs/googleplus');
-// var facebook = require('./lib/jobs/facebook');
 
-// Post a random talk on social networks twice a day
-// * One for european time range
-// * Another for USA time range
-var every_6_hours = "* * * * * *";
-var context = { count: 0 };
-var rtt = crontab.scheduleJob(every_6_hours, twitter.randTalkStatus, null, context);
+// Add jobs
+schedule.start("random-twitter-status", twitter.randTalkStatus, 1000);
+
+// Reset scheduler
 /*
-var rtf = crontab.scheduleJob(every_6_hours, twitter.randTalkFacebook);
-var rtg = crontab.scheduleJob(every_6_hours, twitter.randTalkGooglePlus);
+setInterval(function() {
+    schedule.reset();
+}, 5000);
 */
 
 // TODO: it should be a webserver
-// * exports an API
 // * monitor scheduled jobs
 // * pause / unpause jobs
+// * read jobs from a configuration file
 // * reload configuration
+// * export an HTTP API
