@@ -9,7 +9,7 @@ var del = require('del');
 
 gulp.task('clean', function() {
     del(['node_modules', 'coverage'], function(err, delfiles) {
-        return err
+        return err;
     });
 });
 

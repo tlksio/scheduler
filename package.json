@@ -1,6 +1,6 @@
 {
   "name": "scheduler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tlks.io scheduler for basic jobs",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/tlksio/scheduler",
   "dependencies": {
-    "node-crontab": "0.0.8"
+  },
+  "devDependencies": {
   }
 }
