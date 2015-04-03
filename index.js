@@ -1,18 +1,19 @@
 var config = require('./config.json');
-
 var schedule = require('./lib/schedule');
+
 var twitter = require('./lib/jobs/twitter');
 
-// Add jobs
-schedule.start("random-twitter-status", twitter.randTalkStatus, 1000);
-schedule.start("random-twitter-status-2", twitter.randTalkStatus, 1000);
+// Reset
+schedule.reset();
 
-// Reset scheduler
-/*
-setInterval(function() {
-    schedule.reset();
-}, 5000);
-*/
+// Add jobs
+schedule.start("random-twitter-status",
+               twitter.randTalkStatus,
+               1000);
+
+schedule.start("random-facebook-status",
+               twitter.randTalkStatus,
+               1000);
 
 // TODO: it should be a webserver
 // * monitor scheduled jobs
