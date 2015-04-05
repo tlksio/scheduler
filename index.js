@@ -1,7 +1,10 @@
 var config = require('./config.json');
-var schedule = require('./lib/schedule');
+
+var Schedule = require('./lib/schedule');
 
 var twitter = require('./lib/jobs/twitter');
+
+var schedule = new Schedule;
 
 // Reset
 schedule.reset();

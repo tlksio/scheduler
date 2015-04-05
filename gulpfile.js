@@ -14,16 +14,6 @@ gulp.task('clean', function() {
 });
 
 gulp.task('dist', function() {
-    return gulp.src(['./index.js', './lib/**/*.js'])
-        .pipe(sourcemaps.init())
-        .pipe(concat('libtlks.js'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('libtlks.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('jshint', function() {
