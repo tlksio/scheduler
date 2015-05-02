@@ -1,6 +1,6 @@
 var config = require('./config.json');
 
-var Schedule = require('./lib/schedule');
+var Schedule = require('brahma');
 
 var twitter = require('./lib/jobs/twitter');
 
